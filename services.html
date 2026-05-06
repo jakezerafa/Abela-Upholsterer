@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Abela Upholsterer Malta</title>
-  <meta name="description" content="Furniture upholstery, automobile upholstery, leather restoration and repair services in Msida, Malta.">
+  <meta name="description" content="Automobile upholstery, aviation upholstery, windscreen replacement and leather restoration services in Msida, Malta.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -54,8 +54,14 @@
     .tag-label{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
     .tag-label::before{content:'';display:inline-block;width:18px;height:1px;background:var(--accent);}
     .divider{width:40px;height:2px;background:linear-gradient(90deg,var(--accent),transparent);margin:18px 0 24px;}
-    .svc-row{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-    .svc-row.flip{direction:rtl;}.svc-row.flip>*{direction:ltr;}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+    .svc-card{background:var(--elevated);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.25s ease,box-shadow 0.25s ease;}
+    .svc-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,0.13),0 0 0 1px rgba(201,148,58,0.18);}
+    .svc-card-img{height:220px;overflow:hidden;flex-shrink:0;}
+    .svc-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.45s ease;}
+    .svc-card:hover .svc-card-img img{transform:scale(1.05);}
+    .svc-card-body{padding:28px;display:flex;flex-direction:column;flex:1;}
+    @media(max-width:1024px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
     .footer{background:var(--nav-bg);border-top:1px solid rgba(255,255,255,0.06);padding:72px 32px 36px;}
     .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08);}
     .footer-bot{max-width:1200px;margin:0 auto;padding-top:24px;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:rgba(245,237,224,0.4);}
@@ -64,7 +70,7 @@
     .f-links a{font-size:14px;color:rgba(245,237,224,0.6);text-decoration:none;transition:color 0.2s ease;}
     .f-links a:hover{color:var(--accent);}
     @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}}
-    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:block;}.svc-row,.svc-row.flip{grid-template-columns:1fr;direction:ltr;gap:36px;}.footer-grid{grid-template-columns:1fr;gap:32px;}.sec{padding:72px 24px;}.footer-bot{flex-direction:column;gap:8px;text-align:center;}}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:block;}.svc-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;gap:32px;}.sec{padding:72px 24px;}.footer-bot{flex-direction:column;gap:8px;text-align:center;}}
   </style>
 </head>
 <body>
@@ -95,143 +101,112 @@
   </div>
 </section>
 
-<!-- AUTOMOBILE UPHOLSTERY -->
-<section id="automobile" class="sec" style="background:var(--surface);position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,148,58,0.04) 0%,transparent 65%);pointer-events:none;"></div>
+<!-- SERVICES GRID -->
+<section class="sec" style="background:var(--bg);">
   <div class="wrap">
-    <div class="svc-row flip">
-      <div class="reveal-r">
-        <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12),0 0 0 1px rgba(201,148,58,0.15);">
-          <img src="https://images.pexels.com/photos/18198200/pexels-photo-18198200.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Automobile Upholstery Malta" style="width:100%;display:block;">
-        </div>
-      </div>
-      <div class="reveal-l">
-        <div class="tag-label">Service 01</div>
-        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:700;margin-bottom:0;">Automobile Upholstery</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:20px;">Your car's interior deserves the same attention as its exterior. We specialise in high-quality automobile upholstery — from simple seat repairs to full custom interior makeovers.</p>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:28px;">We work with leather, alcantara, and premium fabrics to give your vehicle a fresh, refined finish that lasts.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Car Seats — Repair &amp; Full Recover</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Door Panels &amp; Trim</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Headliners &amp; Roof Linings</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Convertible Hoods &amp; Soft Tops</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Dashboard &amp; Steering Wheel Wrap</li>
-        </ul>
-        <a href="contact.html" class="btn-p">Request a Quote</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="svc-grid">
 
-<!-- AVIATION UPHOLSTERY -->
-<section id="aviation" class="sec" style="background:var(--bg);">
-  <div class="wrap">
-    <div class="svc-row">
-      <div class="reveal-l">
-        <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12),0 0 0 1px rgba(201,148,58,0.15);">
-          <img src="https://images.pexels.com/photos/1104768/pexels-photo-1104768.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Aviation Upholstery Malta" style="width:100%;display:block;">
+      <!-- AUTOMOBILE UPHOLSTERY -->
+      <div class="svc-card reveal" id="automobile">
+        <div class="svc-card-img">
+          <img src="https://images.pexels.com/photos/18198200/pexels-photo-18198200.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Automobile Upholstery Malta">
+        </div>
+        <div class="svc-card-body">
+          <div class="tag-label">Service 01</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:0;">Automobile Upholstery</h3>
+          <div class="divider"></div>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;margin-bottom:16px;">From seat repairs to full custom interior makeovers — we work with leather, alcantara, and premium fabrics.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1;">
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Car Seats — Repair &amp; Full Recover</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Door Panels &amp; Trim</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Headliners &amp; Roof Linings</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Convertible Hoods &amp; Soft Tops</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Dashboard &amp; Steering Wheel Wrap</li>
+          </ul>
+          <a href="contact.html" class="btn-p" style="font-size:13.5px;padding:11px 20px;align-self:flex-start;">Request a Quote</a>
         </div>
       </div>
-      <div class="reveal-r">
-        <div class="tag-label">Service 02</div>
-        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:700;margin-bottom:0;">Aviation Upholstery</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:20px;">We bring the same precision and craftsmanship to aircraft interiors as we do to automotive work. From private jets to light aircraft, we handle aviation upholstery with care and expertise.</p>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:28px;">Every stitch is made to last, using materials suited to the aviation environment — durable, lightweight, and impeccably finished.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Pilot &amp; Passenger Seat Upholstery</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Interior Panel Covering</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Headliner &amp; Ceiling Linings</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Private Jets &amp; Light Aircraft</li>
-        </ul>
-        <a href="contact.html" class="btn-p">Request a Quote</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- WINDSCREEN REPLACEMENT -->
-<section id="windscreen" class="sec" style="background:var(--surface);position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,148,58,0.04) 0%,transparent 65%);pointer-events:none;"></div>
-  <div class="wrap">
-    <div class="svc-row flip">
-      <div class="reveal-r">
-        <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12),0 0 0 1px rgba(201,148,58,0.15);">
-          <img src="https://images.pexels.com/photos/9635580/pexels-photo-9635580.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Windscreen Replacement Malta" style="width:100%;display:block;">
+      <!-- AVIATION UPHOLSTERY -->
+      <div class="svc-card reveal d1" id="aviation">
+        <div class="svc-card-img">
+          <img src="https://images.pexels.com/photos/1104768/pexels-photo-1104768.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Aviation Upholstery Malta">
+        </div>
+        <div class="svc-card-body">
+          <div class="tag-label">Service 02</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:0;">Aviation Upholstery</h3>
+          <div class="divider"></div>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;margin-bottom:16px;">Precision craftsmanship for aircraft interiors — from private jets to light aircraft, fitted with durable, aviation-grade materials.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1;">
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Pilot &amp; Passenger Seat Upholstery</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Interior Panel Covering</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Headliner &amp; Ceiling Linings</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Private Jets &amp; Light Aircraft</li>
+          </ul>
+          <a href="contact.html" class="btn-p" style="font-size:13.5px;padding:11px 20px;align-self:flex-start;">Request a Quote</a>
         </div>
       </div>
-      <div class="reveal-l">
-        <div class="tag-label">Service 03</div>
-        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:700;margin-bottom:0;">Windscreen Replacement</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:20px;">A cracked or damaged windscreen is both a safety hazard and an eyesore. We offer professional windscreen replacement for cars, vans, and other vehicles — quickly and at competitive prices.</p>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:28px;">Using quality glass and proper fitting techniques, we ensure your vehicle is road-safe and your visibility is fully restored after every replacement.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Front &amp; Rear Windscreen</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Side Windows</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Cars, Vans &amp; Commercial Vehicles</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Crack Repair (where possible)</li>
-        </ul>
-        <a href="contact.html" class="btn-p">Request a Quote</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- LEATHER RESTORATION -->
-<section id="leather" class="sec" style="background:var(--bg);">
-  <div class="wrap">
-    <div class="svc-row">
-      <div class="reveal-l">
-        <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12),0 0 0 1px rgba(201,148,58,0.15);">
-          <img src="https://images.pexels.com/photos/15092989/pexels-photo-15092989.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Leather Restoration Malta" style="width:100%;display:block;">
+      <!-- WINDSCREEN REPLACEMENT -->
+      <div class="svc-card reveal d2" id="windscreen">
+        <div class="svc-card-img">
+          <img src="https://images.pexels.com/photos/9635580/pexels-photo-9635580.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Windscreen Replacement Malta">
+        </div>
+        <div class="svc-card-body">
+          <div class="tag-label">Service 03</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:0;">Windscreen Replacement</h3>
+          <div class="divider"></div>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;margin-bottom:16px;">Professional windscreen replacement for cars, vans, and commercial vehicles — done quickly and at competitive prices.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1;">
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Front &amp; Rear Windscreen</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Side Windows</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Cars, Vans &amp; Commercial Vehicles</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Crack Repair (where possible)</li>
+          </ul>
+          <a href="contact.html" class="btn-p" style="font-size:13.5px;padding:11px 20px;align-self:flex-start;">Request a Quote</a>
         </div>
       </div>
-      <div class="reveal-r">
-        <div class="tag-label">Service 04</div>
-        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:700;margin-bottom:0;">Leather Restoration</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:20px;">Leather fades, cracks, and loses its lustre over time — but with the right treatment, it can be brought back to life. Our leather restoration service is thorough and long-lasting.</p>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:28px;">We assess the leather's condition and apply the appropriate treatment — from deep cleaning and colour matching to crack filling and protective sealing.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Deep Cleaning &amp; Conditioning</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Colour Restoration &amp; Re-dyeing</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Crack &amp; Tear Repair</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Protective Sealant &amp; Finishing</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Automotive Leather Treatment</li>
-        </ul>
-        <a href="contact.html" class="btn-p">Request a Quote</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- REPAIRS & PATCHES -->
-<section id="repairs" class="sec" style="background:var(--surface);position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(201,148,58,0.04) 0%,transparent 60%);pointer-events:none;"></div>
-  <div class="wrap">
-    <div class="svc-row flip">
-      <div class="reveal-r">
-        <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12),0 0 0 1px rgba(201,148,58,0.15);">
-          <img src="https://images.pexels.com/photos/20212637/pexels-photo-20212637.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Upholstery Repairs Malta" style="width:100%;display:block;">
+      <!-- LEATHER RESTORATION -->
+      <div class="svc-card reveal d3" id="leather">
+        <div class="svc-card-img">
+          <img src="https://images.pexels.com/photos/15092989/pexels-photo-15092989.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Leather Restoration Malta">
+        </div>
+        <div class="svc-card-body">
+          <div class="tag-label">Service 04</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:0;">Leather Restoration</h3>
+          <div class="divider"></div>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;margin-bottom:16px;">Faded, cracked, or worn leather brought back to life — from deep cleaning and colour matching to crack filling and sealing.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1;">
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Deep Cleaning &amp; Conditioning</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Colour Restoration &amp; Re-dyeing</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Crack &amp; Tear Repair</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Protective Sealant &amp; Finishing</li>
+          </ul>
+          <a href="contact.html" class="btn-p" style="font-size:13.5px;padding:11px 20px;align-self:flex-start;">Request a Quote</a>
         </div>
       </div>
-      <div class="reveal-l">
-        <div class="tag-label">Service 05</div>
-        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:700;margin-bottom:0;">Repairs &amp; Patches</h2>
-        <div class="divider"></div>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:20px;">Not every upholstery problem requires a full recover. We specialise in targeted repairs and patches — fixing tears, replacing worn sections, and restoring structural integrity.</p>
-        <p style="font-size:15px;color:var(--text-secondary);line-height:1.85;margin-bottom:28px;">This cost-effective service is ideal for minor damage and can significantly extend the life of your vehicle interior without a full replacement.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Tear &amp; Rip Repairs</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Fabric &amp; Leather Patches</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Foam &amp; Padding Replacement</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Zipper &amp; Seam Repairs</li>
-          <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--text-secondary);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Spring &amp; Frame Reinforcement</li>
-        </ul>
-        <a href="contact.html" class="btn-p">Request a Quote</a>
+
+      <!-- REPAIRS & PATCHES -->
+      <div class="svc-card reveal d4" id="repairs">
+        <div class="svc-card-img">
+          <img src="https://images.pexels.com/photos/20212637/pexels-photo-20212637.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Upholstery Repairs Malta">
+        </div>
+        <div class="svc-card-body">
+          <div class="tag-label">Service 05</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:0;">Repairs &amp; Patches</h3>
+          <div class="divider"></div>
+          <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;margin-bottom:16px;">Targeted repairs for tears, worn sections, and damaged stitching — a cost-effective alternative to a full recover.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1;">
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Tear &amp; Rip Repairs</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Fabric &amp; Leather Patches</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Foam &amp; Padding Replacement</li>
+            <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-secondary);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Zipper &amp; Seam Repairs</li>
+          </ul>
+          <a href="contact.html" class="btn-p" style="font-size:13.5px;padding:11px 20px;align-self:flex-start;">Request a Quote</a>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
