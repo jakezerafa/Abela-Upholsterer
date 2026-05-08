@@ -104,6 +104,7 @@
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 56px; text-align: center; }
     .features-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gallery-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 
     /* Footer — dark espresso to anchor the page */
     .footer { background: var(--nav-bg); border-top: 1px solid rgba(255,255,255,0.06); padding: 72px 32px 36px; }
@@ -119,6 +120,7 @@
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
       .stats-row { grid-template-columns: repeat(2, 1fr); }
       .features-row { grid-template-columns: 1fr 1fr; }
+      .gallery-preview { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -127,6 +129,7 @@
       .services-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .features-row { grid-template-columns: 1fr; }
+      .gallery-preview { grid-template-columns: repeat(2, 1fr); }
       .stats-row { grid-template-columns: 1fr 1fr; }
       .sec { padding: 72px 24px; }
       .stat-n { font-size: 40px; }
@@ -259,27 +262,23 @@
 </section>
 
 
-<!-- WHY CHOOSE US -->
+<!-- GALLERY PREVIEW -->
 <section class="sec" style="background:var(--surface);position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(201,148,58,0.06) 0%,transparent 60%);pointer-events:none;"></div>
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:56px;" class="reveal">
-      <div class="tag-label" style="justify-content:center;">Why Choose Us</div>
-      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:700;">Why Our Customers Trust Us</h2>
+    <div style="text-align:center;margin-bottom:40px;" class="reveal">
+      <div class="tag-label" style="justify-content:center;">Our Work</div>
+      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:700;">Craftsmanship in Every Detail</h2>
     </div>
-    <div class="features-row">
-      <div style="background:var(--elevated);border:1px solid var(--border-subtle);border-radius:16px;padding:40px 32px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,0.05);" class="reveal d1">
-        <div style="width:44px;height:44px;min-width:44px;background:var(--accent-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div style="font-size:17px;font-weight:600;margin-bottom:8px;">Premium Materials</div><div style="font-size:15px;color:var(--text-secondary);line-height:1.7;">Only top-quality fabrics and genuine leather from trusted suppliers.</div></div>
-      </div>
-      <div style="background:var(--elevated);border:1px solid var(--border-subtle);border-radius:16px;padding:40px 32px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,0.05);" class="reveal d2">
-        <div style="width:44px;height:44px;min-width:44px;background:var(--accent-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div style="font-size:17px;font-weight:600;margin-bottom:8px;">Expert Craftsmen</div><div style="font-size:15px;color:var(--text-secondary);line-height:1.7;">Over 80 years of hands-on experience across all upholstery types.</div></div>
-      </div>
-      <div style="background:var(--elevated);border:1px solid var(--border-subtle);border-radius:16px;padding:40px 32px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,0.05);" class="reveal d3">
-        <div style="width:44px;height:44px;min-width:44px;background:var(--accent-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div style="font-size:17px;font-weight:600;margin-bottom:8px;">Honest & Reliable</div><div style="font-size:15px;color:var(--text-secondary);line-height:1.7;">Transparent pricing, reliable timelines — no hidden costs or surprises.</div></div>
-      </div>
+    <div class="gallery-preview reveal">
+      <a href="gallery.html" style="display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;"><img src="https://images.pexels.com/photos/18198200/pexels-photo-18198200.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Car seat recover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"></a>
+      <a href="gallery.html" style="display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;"><img src="https://images.pexels.com/photos/9635580/pexels-photo-9635580.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Car seat upholstery" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"></a>
+      <a href="gallery.html" style="display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;"><img src="https://images.pexels.com/photos/30211139/pexels-photo-30211139.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Leather restoration" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"></a>
+      <a href="gallery.html" style="display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;"><img src="https://images.pexels.com/photos/8886310/pexels-photo-8886310.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Car interior trim" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"></a>
+      <a href="gallery.html" style="display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;"><img src="https://images.pexels.com/photos/1104768/pexels-photo-1104768.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Aviation interior upholstery" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"></a>
+      <a href="gallery.html" style="display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;"><img src="https://images.pexels.com/photos/8673507/pexels-photo-8673507.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Convertible soft top" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'"></a>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a href="gallery.html" class="btn-p">View Full Gallery</a>
     </div>
   </div>
 </section>
