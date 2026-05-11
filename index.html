@@ -106,6 +106,7 @@
     .features-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .gallery-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .cta-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .cta-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 
     /* Footer — dark espresso to anchor the page */
     .footer { background: var(--nav-bg); border-top: 1px solid rgba(255,255,255,0.06); padding: 72px 32px 36px; }
@@ -123,6 +124,7 @@
       .features-row { grid-template-columns: 1fr 1fr; }
       .gallery-preview { grid-template-columns: repeat(2, 1fr); }
       .cta-cards-grid { grid-template-columns: 1fr 1fr; }
+      .cta-details-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -324,6 +326,30 @@
       </a>
 
     </div>
+
+    <!-- Address + Hours + Map -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px;" class="reveal cta-details-grid">
+      <div>
+        <div class="contact-detail">
+          <div style="width:40px;height:40px;min-width:40px;background:var(--accent-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Address</div>
+            <div style="font-size:15px;color:var(--text);line-height:1.7;">111, Triq il-Wied ta' l-Imsida<br>(Valley Road), Msida, Malta MSD 9024<br><span style="font-size:13px;color:var(--text-secondary);">Next to Panta Lesco</span></div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div style="width:40px;height:40px;min-width:40px;background:var(--accent-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Opening Hours</div>
+            <div style="font-size:15px;color:var(--text);line-height:1.8;">Mon–Fri: 07:00–18:00<br>Saturday: 07:00–13:00<br>Sunday: <span style="color:var(--text-muted);">Closed</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--border-subtle);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.7!2d14.4897!3d35.8997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDU0JzAwLjAiTiAxNMKwMjknMDMuMCJF!5e0!3m2!1sen!2smt!4v1" width="100%" height="260" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
   </div>
 </section>
 
