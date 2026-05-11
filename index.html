@@ -106,6 +106,7 @@
     .features-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .gallery-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .cta-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .cta-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 
     /* Footer — dark espresso to anchor the page */
@@ -125,6 +126,7 @@
       .gallery-preview { grid-template-columns: repeat(2, 1fr); }
       .cta-cards-grid { grid-template-columns: 1fr 1fr; }
       .cta-details-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -284,6 +286,75 @@
     </div>
     <div style="text-align:center;margin-top:36px;" class="reveal">
       <a href="gallery.html" class="btn-p">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" style="background:var(--bg);">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="tag-label" style="justify-content:center;">Google Reviews</div>
+      <h2 style="font-size:clamp(28px,4vw,48px);font-weight:700;">What Our Customers Say</h2>
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;">
+        <span style="color:#FBBC04;font-size:20px;letter-spacing:2px;">★★★★★</span>
+        <span style="font-size:15px;font-weight:600;color:var(--text);">4.6</span>
+        <span style="font-size:14px;color:var(--text-secondary);">· 63 reviews on Google</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="testimonials-grid reveal">
+
+      <!-- Review 1 -->
+      <div style="background:var(--elevated);border:1px solid var(--border-subtle);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:#4285F4;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;flex-shrink:0;">M</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Mark</div>
+              <div style="color:#FBBC04;font-size:13px;letter-spacing:1px;">★★★★★</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;flex:1;">"Fred Abela would have to be one of the friendliest and honest persons on this island. Work done well and beyond expectations."</p>
+        <div style="font-size:12px;color:var(--text-muted);">Posted on Google</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div style="background:var(--elevated);border:1px solid var(--border-subtle);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:#34A853;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;flex-shrink:0;">S</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Sarah</div>
+              <div style="color:#FBBC04;font-size:13px;letter-spacing:1px;">★★★★★</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;flex:1;">"Very pleased with the professional services of Abela Upholsterer, you have brought our diamond back to life. Really good job and very well recommended."</p>
+        <div style="font-size:12px;color:var(--text-muted);">Posted on Google</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div style="background:var(--elevated);border:1px solid var(--border-subtle);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:#EA4335;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;flex-shrink:0;">J</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);">Joseph</div>
+              <div style="color:#FBBC04;font-size:13px;letter-spacing:1px;">★★★★★</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.75;flex:1;">"Fast and very efficient upholstery service. The best. Thanks to Abela Upholsterer for the sport seats upholstery — perfect job like always."</p>
+        <div style="font-size:12px;color:var(--text-muted);">Posted on Google</div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a href="reviews.html" class="btn-o">Leave a Review</a>
     </div>
   </div>
 </section>
